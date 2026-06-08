@@ -13,10 +13,10 @@ import { OrdenProductoModule } from './orden-producto/orden-producto.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
+      host: 'dpg-d8j4chc8aovs738trmmg-a',
       port: 5432,
-      username: 'postgres',
-      password: '123456',
+      username: 'tienda_onilne_user',
+      password: 'EwolOFIvKkMSC1PVuD1z9ELy3a868d4B',
       database: 'tienda_online',
       autoLoadEntities: true,
       synchronize: true,
