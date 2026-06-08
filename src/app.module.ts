@@ -8,18 +8,23 @@ import { ProductosModule } from './productos/productos.module';
 import { OrdenesModule } from './ordenes/ordenes.module';
 import { OrdenProductoModule } from './orden-producto/orden-producto.module';
 
-
 @Module({
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: 'dpg-d8j4chc8aovs738trmmg-a',
       port: 5432,
-      username: 'tienda_onilne_user',
+      username: 'tienda_online_user',
       password: 'EwolOFIvKkMSC1PVuD1z9ELy3a868d4B',
       database: 'tienda_online',
       autoLoadEntities: true,
       synchronize: true,
+      ssl: true,
+      extra: {
+        ssl: {
+          rejectUnauthorized: false,
+        },
+      },
     }),
     ClientesModule,
     CategoriasModule,
