@@ -12,11 +12,7 @@ import { OrdenProductoModule } from './orden-producto/orden-producto.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'dpg-d8j4chc8aovs738trmmg-a',
-      port: 5432,
-      username: 'tienda_online_user',
-      password: 'EwolOFIvKkMSC1PVuD1z9ELy3a868d4B',
-      database: 'tienda_online',
+      url: 'postgresql://tienda_onilne_user:EwolOFIvKkMSC1PVuD1z9ELy3a868d4B@dpg-d8j4chc8aovs738trmmg-a.virginia-postgres.render.com/tienda_onilne',
       autoLoadEntities: true,
       synchronize: true,
       ssl: true,
